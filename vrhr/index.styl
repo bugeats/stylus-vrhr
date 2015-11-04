@@ -1,0 +1,18 @@
+$vertical-rhythm = 20px;
+$horizontal-rhythm = 80px;
+
+vr(n)
+  if unit(n) == "px"
+    ceil(n / $vertical-rhythm) * $vertical-rhythm
+  else if unit(n) == ''
+    round((n * $vertical-rhythm) * 2) / 2;
+  else
+    n
+
+hr(n)
+  if unit(n) == "px"
+    ceil(n / $horizontal-rhythm) * $horizontal-rhythm
+  else if unit(n) == ''
+    round((n * $horizontal-rhythm) * 2) / 2;
+  else
+    n

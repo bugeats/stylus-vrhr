@@ -12,11 +12,21 @@ peq('vr(113.12px)', '120px',  'pixel units round up to next unit (float)');
 peq('vr(155%)',     '155%',   'perc units pass through');
 peq('vr(52em)',     '52em',   'em units pass through');
 
+peq('hr(2)',        '160px',   'int units basic conversion');
+peq('hr(21/34)',    '49.5px', 'ratio units basic conversion');
+peq('hr(1.33)',     '106.5px', 'int units round to nearest half pixel');
+peq('hr(113px)',    '160px',  'pixel units round up to next unit');
+peq('hr(113.12px)', '160px',  'pixel units round up to next unit (float)');
+peq('hr(155%)',     '155%',   'perc units pass through');
+peq('hr(52em)',     '52em',   'em units pass through');
+
 
 test('custom rhythm global vars', function (t) {
     t.plan(1);
 
     var str = [
+        '$vertical-rhythm = 33px',
+        '$horizontal-rhythm = 128px',
         'blink',
         '  vert: vr(1)',
         '  horz: hr(2)',
@@ -24,8 +34,6 @@ test('custom rhythm global vars', function (t) {
 
     stylus(str)
         .use(vrhr())
-        .define('$vertical-rhythm',  new stylus.nodes.Unit(33, 'px'))
-        .define('$horizontal-rhythm', new stylus.nodes.Unit(128, 'px'))
         .render(function (err, css) {
             if (err) throw err;
             t.equal(css, 'blink {\n  vert: 33px;\n  horz: 256px;\n}\n');
