@@ -1,0 +1,25 @@
+{
+  "name": "stylus-vrhr",
+  "version": "1.0.0",
+  "description": "Minimalist vertical rhythm and horizontal rhythm helpers for stylus.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape tests/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bugeats/stylus-vrhr.git"
+  },
+  "keywords": [
+    "stylus",
+    "rhythm",
+    "vertical",
+    "horizontal"
+  ],
+  "author": "Chadwick Dahlquist",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bugeats/stylus-vrhr/issues"
+  },
+  "homepage": "https://github.com/bugeats/stylus-vrhr#readme"
+}
