@@ -1,6 +1,6 @@
 # stylus-vrhr
 
-Minimalist vertical rhythm and horizontal rhythm plugin for stylus.
+Minimalist vertical rhythm and horizontal rhythm plugin for [stylus](http://stylus-lang.com/).
 
 I've been using these helpers on all my stylus projects for years.  It makes your pages look harmonious and consistent. Stop picking random pixel numbers, and use some basic geometry.
 
@@ -20,7 +20,7 @@ p
   margin-bottom: vr(2/12) // 3.5px
 ```
 
-The `vr()` and `hr()` helpers take a plain number and multiply it by the rhythm value. That's it. As you can see from the example, you can easily use ratios instead. Divisions of [12 is nice](http://www.dozenal.org/).
+The `vr()` and `hr()` helpers take a plain number and multiply it by the rhythm value. That's it. As you can see from the example, you can easily use ratios instead. [Divisions of 12 are nice](http://www.dozenal.org/).
 
 However, if you pass the helpers a `px` unit value, the output will be that value rounded up to the nearest rhythm.
 
@@ -38,8 +38,9 @@ Also, all output will be rounded to the nearest half pixel.
 const stylus = require('stylus');
 const vrhr = require('stylus-vrhr');
 
-stylus.use(vrhr());
-stylus.render(...);
+const rendered = stylus('...')
+  .use(vrhr())
+  .render();
 ```
 
 
