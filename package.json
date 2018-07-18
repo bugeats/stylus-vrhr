@@ -4,7 +4,7 @@
   "description": "Minimalist vertical rhythm and horizontal rhythm helpers for stylus.",
   "main": "index.js",
   "scripts": {
-    "test": "tape test/*.tape.js"
+    "test": "tape **/**/**/*.test.js"
   },
   "repository": {
     "type": "git",
