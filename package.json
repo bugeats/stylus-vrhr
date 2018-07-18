@@ -11,10 +11,15 @@
     "url": "git+https://github.com/bugeats/stylus-vrhr.git"
   },
   "keywords": [
-    "stylus",
+    "css",
+    "font-size",
+    "grid",
+    "horizontal",
+    "plugin",
     "rhythm",
-    "vertical",
-    "horizontal"
+    "stylus",
+    "typography",
+    "vertical"
   ],
   "author": "Chadwick Dahlquist",
   "license": "MIT",
