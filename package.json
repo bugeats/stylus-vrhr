@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/bugeats/stylus-vrhr#readme",
   "devDependencies": {
-    "stylus": "^0.54.5",
-    "tape": "^4.9.1"
+    "stylus": "^0.54.7",
+    "tape": "^4.13.2"
   }
 }
